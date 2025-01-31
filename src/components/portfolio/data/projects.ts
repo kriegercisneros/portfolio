@@ -9,13 +9,15 @@ export const projects = [
       title: "Program Submission",
       description: "Enterprise-scale high risk insurance application specifically for D&O insurance",
       demoUrl: "https://program-submission.vercel.app/form/applicant-information",
-      techStack: ["Next.js", "React", "TypeScript", "Node.js"]
+      techStack: ["Next.js", "React", "TypeScript", "Node.js"], 
+      imageUrl:'/program-submission.png'
     },
     {
       title: "Program Analytics",
       description: "Advanced analytics and reporting platform",
       demoUrl: "https://arrowhead-analytics-gilt.vercel.app/book-of-business",
-      techStack: ["Next.js", "React", "TypeScript", "Data Visualization"]
+      techStack: ["Next.js", "React", "TypeScript", "Data Visualization"], 
+      imageUrl:"/program-analytics-agency-screen.png"
     }, 
     {
         title: "Resin Client Portal",

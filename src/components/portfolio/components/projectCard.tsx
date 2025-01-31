@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { motion } from 'framer-motion';
@@ -6,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import type { Project } from '@/types/index';
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from 'react';
 
-export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, techStack }) => {
+export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, techStack, imageUrl }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -22,7 +23,7 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
         <CardContent>
           <div className="w-full h-48 bg-gray-200 rounded-md overflow-hidden">
             <img 
-              src="/api/placeholder/400/320" 
+              src={imageUrl}
               alt={title} 
               className="w-full h-full object-cover"
             />
