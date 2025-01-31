@@ -9,6 +9,7 @@ export interface Project {
   
   export interface Skill {
     title: string;
-    icon: React.ElementType;
+    // iconType: React.ElementType;
+    iconType:string;
     items: string[];
   }

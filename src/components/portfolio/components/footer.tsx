@@ -12,7 +12,7 @@ export const Footer = () => {
             variant="ghost"
             size="icon"
             className="hover:text-primary hover:bg-secondary/10"
-            onClick={() => window.open('https://github.com/yourusername', '_blank')}
+            onClick={() => window.open('https://github.com/kriegercisneros', '_blank')}
           >
             <Github className="h-6 w-6" />
             <span className="sr-only">GitHub</span>
@@ -22,7 +22,7 @@ export const Footer = () => {
             variant="ghost"
             size="icon"
             className="hover:text-primary hover:bg-secondary/10"
-            onClick={() => window.open('https://linkedin.com/in/yourusername', '_blank')}
+            onClick={() => window.open('https://www.linkedin.com/in/jacqueline-krieger-cisneros/', '_blank')}
           >
             <Linkedin className="h-6 w-6" />
             <span className="sr-only">LinkedIn</span>
@@ -32,7 +32,7 @@ export const Footer = () => {
             variant="ghost"
             size="icon"
             className="hover:text-primary hover:bg-secondary/10"
-            onClick={() => window.location.href = 'mailto:your.email@example.com'}
+            onClick={() => window.location.href = 'mailto:krieger.jacqueline@gmail.com'}
           >
             <Mail className="h-6 w-6" />
             <span className="sr-only">Email</span>
