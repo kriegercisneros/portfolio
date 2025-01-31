@@ -22,6 +22,12 @@ export const projects = [
         description: "Auto Program for Insurance Monitoring",
         demoUrl: "#",
         techStack: ["React", "TypeScript", "Data Visualization", "AWS", "Mongo", "Mandrill"]
-      }
+      }, 
+      {
+        title: "Simple Sketch",
+        description: "Cash Should I put this in?",
+        demoUrl: "#",
+        techStack: ["React", "TypeScript", "AWS", "Mongo"]
+      }, 
   ];
   
