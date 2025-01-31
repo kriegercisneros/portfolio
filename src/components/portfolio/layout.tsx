@@ -124,8 +124,8 @@ const Portfolio = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl font-bold mb-2">Jacqueline Krieger-Cisneros</h1>
-          <p className="text-xl text-gray-600 mb-8">Full-Stack Engineer specializing in enterprise solutions</p>
+          <h1 className="text-4xl font-bold mb-2">Jacqueline (Jackie) Krieger</h1>
+          <p className="text-xl text-gray-600 mb-8">Full-Stack Software Engineer specializing in enterprise solutions</p>
         </motion.div>
 
         <Tabs defaultValue="projects" className="w-full">
