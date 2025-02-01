@@ -83,7 +83,32 @@ export const projects = [
         description: "Auto Program for Insurance Monitoring",
         demoUrl: "/jackie - port - resin client.mp4",
         techStack: ["React", "TypeScript", "Data Visualization", "AWS", "Mongo", "Mandrill"],
-        imageUrl:'/resin-client.png'
+        imageUrl:'/resin-client.png', 
+        learnings: [
+            "Architected and implemented complete full-stack solution from database to deployment",
+            "Designed scalable MongoDB schema and API architecture for complex program management",
+            "Integrated multiple AWS services (S3, ECR, Textract, Lambda, SQS) for robust cloud infrastructure",
+            "Implemented comprehensive security measures including RBAC, OTP authentication, and encryption",
+            "Developed automated document processing pipeline using AWS Textract and SQS"
+          ],
+          outcomes: [
+            "Delivered a secure, scalable client portal handling sensitive auto program data",
+            "Created modular, reusable component library for consistent UI/UX",
+            "Established robust data flows between MongoDB and client through well-structured APIs",
+            "Implemented automated email communications through Mandrill transactional API",
+            "Maintained containerized application with streamlined deployment using Docker and Terraform"
+          ],
+          impact: "Delivered a comprehensive auto program management solution that transformed client operations, combining robust security, automated document processing, and intuitive user experience in a scalable cloud architecture",
+          collaborators: [
+            {
+              name: "Business Leadership",
+              role: "Product Vision & Requirements"
+            },
+            {
+              name: "Program Stakeholders",
+              role: "Feature Requirements"
+            }
+          ]
       }, 
     //   {
     //     title: "Simple Sketch",
