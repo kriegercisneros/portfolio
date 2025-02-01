@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Header } from '@/components/portfolio/components/header';
 import { Projects } from '@/components/portfolio/components/projects';
 import { TechnicalSkills } from '@/components/portfolio/components/technicalSkills';
+import { AboutMe } from './components/about';
 import { Footer } from '@/components/portfolio/components/footer'
 const PortfolioLayout = () => {
   return (
@@ -25,6 +26,9 @@ const PortfolioLayout = () => {
           <TabsContent value="skills">
             <TechnicalSkills />
           </TabsContent>
+          <TabsContent value="about">
+            <AboutMe />
+            </TabsContent>
         </Tabs>
       </main>
       <Footer />
