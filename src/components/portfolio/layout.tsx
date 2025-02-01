@@ -11,7 +11,7 @@ const PortfolioLayout = () => {
       <main className="container mx-auto px-4 py-12">
         <Header />
         
-        <Tabs defaultValue="projects" className="w-full">
+        <Tabs defaultValue="projects" className="w-full z-100">
           <TabsList className="mb-8">
             <TabsTrigger value="projects">Projects</TabsTrigger>
             <TabsTrigger value="skills">Technical Skills</TabsTrigger>
