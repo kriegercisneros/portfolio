@@ -162,13 +162,13 @@ const ProjectDetailsDialog: React.FC<ProjectDetailsProps> = ({
         <ScrollArea className="flex-1 p-6 pt-0">
           <div className="space-y-8 pr-4">
             {/* Project Image */}
-            <div className="w-full h-64 rounded-lg overflow-hidden">
+            {/* <div className="w-full h-64 rounded-lg overflow-hidden">
               <img
                 src={project.imageUrl}
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
-            </div>
+            </div> */}
 
             {/* Tools Used */}
             <div>
