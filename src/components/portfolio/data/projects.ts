@@ -81,7 +81,8 @@ export const projects = [
     {
         title: "Resin Client Portal",
         description: "Auto Program for Insurance Monitoring",
-        demoUrl: "/jackie - port - resin client.mp4",
+        // demoUrl: "/jackie - port - resin client.mp4",
+        demoUrl:"#",
         techStack: ["React", "TypeScript", "Data Visualization", "AWS", "Mongo", "Mandrill"],
         imageUrl:'/resin-client.png', 
         learnings: [

@@ -15,6 +15,7 @@ const PortfolioLayout = () => {
           <TabsList className="mb-8">
             <TabsTrigger value="projects">Projects</TabsTrigger>
             <TabsTrigger value="skills">Technical Skills</TabsTrigger>
+            <TabsTrigger value="about">About</TabsTrigger>
           </TabsList>
           
           <TabsContent value="projects">
