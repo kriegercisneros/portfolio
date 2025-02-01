@@ -100,7 +100,7 @@ export const Header = () => {
         <div 
           className="absolute top-0 left-0 w-full h-full animate-gradient"
           style={{
-            background: 'linear-gradient(-45deg, #E07A5F,rgb(192, 86, 67),rgb(255, 241, 238))',
+            background: 'linear-gradient(-45deg, #E07A5F,rgb(192, 86, 67),rgb(255, 255, 254))',
             backgroundSize: '400% 400%',
             opacity: 0.5,
             maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
