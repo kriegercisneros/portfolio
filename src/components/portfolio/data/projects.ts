@@ -3,7 +3,8 @@ export const projects = [
       title: "Resin Mobile App",
       description: "Comprehensive mobile driver onboarding application with AWS integration",
       demoUrl: "#",
-      techStack: ["React", "AWS", "Node.js", "TypeScript", "Mongo"]
+      techStack: ["React", "AWS", "Node.js", "TypeScript", "Mongo"], 
+      imageUrl:'/mobile.png'
     },
     {
       title: "Program Submission",
@@ -22,8 +23,9 @@ export const projects = [
     {
         title: "Resin Client Portal",
         description: "Auto Program for Insurance Monitoring",
-        demoUrl: "#",
-        techStack: ["React", "TypeScript", "Data Visualization", "AWS", "Mongo", "Mandrill"]
+        demoUrl: "/jackie - port - resin client.mp4",
+        techStack: ["React", "TypeScript", "Data Visualization", "AWS", "Mongo", "Mandrill"],
+        imageUrl:'/resin-client.png'
       }, 
       {
         title: "Simple Sketch",

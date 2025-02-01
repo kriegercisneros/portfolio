@@ -100,9 +100,9 @@ export const Header = () => {
         <div 
           className="absolute top-0 left-0 w-full h-full animate-gradient"
           style={{
-            background: 'linear-gradient(-45deg, #E07A5F, #D8604C,rgb(252, 225, 219))',
+            background: 'linear-gradient(-45deg, #E07A5F,rgb(192, 86, 67),rgb(255, 241, 238))',
             backgroundSize: '400% 400%',
-            opacity: 0.4,
+            opacity: 0.5,
             maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
             WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)'
           }}

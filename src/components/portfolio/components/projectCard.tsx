@@ -8,7 +8,8 @@ import type { Project } from '@/types/index';
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from 'react';
 
 export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, techStack, imageUrl }) => {
-  return (
+    const isViewable = demoUrl && demoUrl !== "#";
+    return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -42,11 +43,16 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
         <CardFooter>
           <Button 
             variant="outline" 
-            className="w-full bg-accent text-white hover:bg-accent-dark"
+            className="w-full bg-white text-primary hover:bg-accent-light"
             onClick={() => window.open(demoUrl, '_blank')}
           >
-            View Project
+            Learn More
           </Button>
+          {isViewable && (
+            <Button onClick={() => window.open(demoUrl, '_blank')} className="w-full bg-accent text-white hover:bg-accent-dark">
+              View Project
+            </Button>
+          )}
         </CardFooter>
       </Card>
     </motion.div>
