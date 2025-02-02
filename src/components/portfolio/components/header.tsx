@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { FileText } from 'lucide-react';
+import AboutMe from './about';
 
 export const Header = () => {
   const container = {
@@ -46,23 +47,45 @@ export const Header = () => {
       animate="show"
       className="relative pt-8 pb-16"
     >
-      <motion.div variants={item}>
+      {/* <motion.div variants={item}>
         <h1 className="text-5xl font-bold text-primary tracking-tight mb-6">
           Jacqueline Krieger
         </h1>
+        <AboutMe />
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
-  <p className="text-lg md:text-xl text-primary-light max-w-2xl">
-  High-velocity Full-Stack Developer driving resilient, scalable solutions
-  </p>
-  <Button
-    onClick={() => window.open('https://docs.google.com/document/d/e/2PACX-1vTf1iIYUDnZgBAcwPDVm12KkgTA_9D35sz6fYqJ5agtQRQ9Tx2QvqxMGC-Gg5gd4TUGzLjwDUps5p0R/pub', '_blank')}
-    variant="secondary"
-    className="w-full md:w-auto bg-accent hover:bg-accent-dark text-white md:ml-8 whitespace-nowrap transition-colors duration-300"
-  >
-    <FileText className="mr-2 h-4 w-4" />
-    View Resume
-  </Button>
-</div>
+          <p className="text-lg md:text-xl text-primary-light max-w-2xl">
+          High-velocity Full-Stack Developer driving resilient, scalable solutions
+          </p>
+          <Button
+            onClick={() => window.open('https://docs.google.com/document/d/e/2PACX-1vTf1iIYUDnZgBAcwPDVm12KkgTA_9D35sz6fYqJ5agtQRQ9Tx2QvqxMGC-Gg5gd4TUGzLjwDUps5p0R/pub', '_blank')}
+            variant="secondary"
+            className="w-full md:w-auto bg-accent hover:bg-accent-dark text-white md:ml-8 whitespace-nowrap transition-colors duration-300"
+          >
+            <FileText className="mr-2 h-4 w-4" />
+            View Resume
+          </Button>
+        </div>
+      </motion.div> */}
+      <motion.div variants={item}>
+        <div className="flex items-center">
+          <h1 className="text-5xl font-bold text-primary tracking-tight mb-6">
+            Jacqueline Krieger
+          </h1>
+          <AboutMe />
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
+          <p className="text-lg md:text-xl text-primary-light max-w-2xl">
+            High-velocity Full-Stack Developer driving resilient, scalable solutions
+          </p>
+          <Button
+            onClick={() => window.open('https://docs.google.com/document/d/e/2PACX-1vTf1iIYUDnZgBAcwPDVm12KkgTA_9D35sz6fYqJ5agtQRQ9Tx2QvqxMGC-Gg5gd4TUGzLjwDUps5p0R/pub', '_blank')}
+            variant="secondary"
+            className="w-full md:w-auto bg-accent hover:bg-accent-dark text-white md:ml-8 whitespace-nowrap transition-colors duration-300"
+          >
+            <FileText className="mr-2 h-4 w-4" />
+            View Resume
+          </Button>
+        </div>
       </motion.div>
     </motion.header>
   </div>
