@@ -240,6 +240,7 @@ const AboutMe = () => {
     // }
   ];
 
+ 
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -248,45 +249,46 @@ const AboutMe = () => {
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 ml-4 mb-6"
         >
-          <Sparkle className="h-4 w-4" />
+          <Sparkle className="h-5 w-5" />
           {/* <span className="text-sm font-medium">About Me</span> */}
         </motion.button>
       </SheetTrigger>
-      <SheetContent className="!left-[10%] !w-[90%] sm:!left-auto sm:!w-full sm:max-w-lg">
-        <SheetHeader>
-          <SheetTitle className="text-3xl font-bold text-primary mb-6">Beyond the Code</SheetTitle>
-        </SheetHeader>
-        <motion.div 
-          className="space-y-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {personalItems.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="flex items-start gap-4"
-            >
-              <span className="text-2xl">{item.icon}</span>
-              <div>
-                <h3 className="font-semibold text-primary mb-1">{item.title}</h3>
-                <p className="text-primary-light text-sm">{item.description}</p>
-              </div>
-            </motion.div>
-          ))}
-          
-          <motion.p 
-            className="text-primary-light text-sm mt-8 italic"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
+      <SheetContent className="!left-[10%] !w-[90%] sm:!left-auto sm:!w-full sm:max-w-lg overflow-y-auto">
+        <div className="h-full flex flex-col">
+          <SheetHeader>
+            <SheetTitle className="text-3xl font-bold text-primary mb-6">Beyond the Code</SheetTitle>
+          </SheetHeader>
+          <motion.div 
+            className="space-y-8 flex-grow overflow-y-auto pr-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            Bringing a holistic approach to development, where technical expertise meets enjoying life to the fullest.
+            {personalItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="flex items-start gap-4"
+              >
+                <span className="text-2xl">{item.icon}</span>
+                <div>
+                  <h3 className="font-semibold text-primary mb-1">{item.title}</h3>
+                  <p className="text-primary-light text-sm">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+            
+            <motion.p 
+              className="text-primary-light text-sm mt-8 italic"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >         Bringing a holistic approach to development, where technical expertise meets enjoying life to the fullest.
           </motion.p>
         </motion.div>
+        </div>
       </SheetContent>
     </Sheet>
   );
