@@ -6,17 +6,19 @@ import { Projects } from '@/components/portfolio/components/projects';
 import { TechnicalSkills } from '@/components/portfolio/components/technicalSkills';
 import { AboutMe } from './components/about';
 import { Footer } from '@/components/portfolio/components/footer'
+
+
 const PortfolioLayout = () => {
   return (
     <div className="min-h-screen bg-background">
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto py-12">
         <Header />
         
         <Tabs defaultValue="projects" className="w-full z-100">
           <TabsList className="mb-8">
             <TabsTrigger value="projects">Projects</TabsTrigger>
             <TabsTrigger value="skills">Technical Skills</TabsTrigger>
-            <TabsTrigger value="about">About</TabsTrigger>
+            {/* <TabsTrigger value="about">About</TabsTrigger> */}
           </TabsList>
           
           <TabsContent value="projects">

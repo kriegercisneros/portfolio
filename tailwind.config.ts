@@ -12,6 +12,9 @@ const config = {
   prefix: "",
   theme: {
     extend: {
+      fontFamily: {
+        serif: ['Merriweather', 'serif'], 
+      },
       colors: {
         // Your custom colors
         primary: {

@@ -36,7 +36,7 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="w-10 h-10 rounded-full hover:bg-accent hover:text-white transition-colors flex items-center justify-center p-0"
+                        className="w-10 h-10 hover:text-accent rounded-full flex items-center justify-center p-0"
                         onClick={() => window.open(demoUrl, '_blank')}
                       >
                         <Eye className="h-5 w-5" />
@@ -73,7 +73,7 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
         <CardFooter className="mt-auto pt-4">
           <Button 
             variant="outline" 
-            className="w-full bg-white text-primary hover:bg-accent"
+            className="w-full"
             onClick={() => setShowDetails(true)}
           >
             Learn More
