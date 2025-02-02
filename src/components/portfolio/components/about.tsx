@@ -204,6 +204,11 @@ import { Sparkle } from 'lucide-react';
 const AboutMe = () => {
   const personalItems = [
     {
+      icon:"🎯 ", 
+      title:"Future Self", 
+      description:"Aiming to work in applied AI, developing agentic systems that will be the future of tech"
+    },
+    {
       icon: "🧘‍♀️",
       title: "Yoga",
       description: "Finding balance and functional strength through movement meditation"
