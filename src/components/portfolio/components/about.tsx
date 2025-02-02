@@ -226,7 +226,7 @@ const AboutMe = () => {
     {
       icon: "📖 ",
       title: "Reading",
-      description: "Spending hours exploring new ideas in cosmology, quantum, tech and non-fiction"
+      description: "Spending hours exploring new ideas in cosmology, quantum, tech and snarky fiction"
     },
     // {
     //   icon: "🍳",
