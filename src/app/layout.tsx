@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Jacqueline Krieger - Portfolio',
-  description: 'Versatile Full-Stack Developer Delivering Rapid, Resilient Solutions Across Stacks',
+  description: 'High-velocity Full-Stack Developer driving resilient, scalable solutions',
 }
 
 export default function RootLayout({

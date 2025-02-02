@@ -52,7 +52,7 @@ export const Header = () => {
         </h1>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
   <p className="text-lg md:text-xl text-primary-light max-w-2xl">
-  Versatile Full-Stack Developer Delivering Rapid, Resilient Solutions Across Stacks
+  High-velocity Full-Stack Developer driving resilient, scalable solutions
   </p>
   <Button
     onClick={() => window.open('https://docs.google.com/document/d/e/2PACX-1vTf1iIYUDnZgBAcwPDVm12KkgTA_9D35sz6fYqJ5agtQRQ9Tx2QvqxMGC-Gg5gd4TUGzLjwDUps5p0R/pub', '_blank')}
