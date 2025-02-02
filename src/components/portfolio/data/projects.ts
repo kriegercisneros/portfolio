@@ -3,10 +3,11 @@ export const projects = [
 
       {
         title: "Risk Manager Dashboard",
-        description: "Advanced analytics and reporting platform with customizable dashboards, delivered in just 6 weeks",
+        description: "Advanced analytics and reporting platform with customizable dashboards",
         demoUrl: "https://arrowhead-analytics-gilt.vercel.app/book-of-business",
         techStack: ["Next.js", "React", "TypeScript", "Data Visualization"],
         imageUrl: "/program-analytics-agency-screen.png",
+        timeline:'6 weeks',
         learnings: [
           "Translated complex business requirements into intuitive UI/UX patterns",
           "Designed and implemented custom data visualization components",
@@ -34,10 +35,11 @@ export const projects = [
       },
       {
         title: "Next-Gen Driver Onboarding",
-        description: "Comprehensive mobile driver onboarding application with AWS integration",
+        description: "Mobile-first driver compliance and management app",
         demoUrl: "#",
         techStack: ["React", "AWS", "Node.js", "TypeScript", "Mongo"], 
         imageUrl:'/mobile.png', 
+        timeline:'10 weeks',
         collaborators: [
           { name: "Development Team", role: "Full Stack Implementation" },
           { name: "UX Team", role: "User Experience Design" }, 
@@ -57,7 +59,7 @@ export const projects = [
       },
     {
         title: "Risk Management Center",
-        description: "Auto Program for Insurance Monitoring",
+        description: " Location Risk Management Platform",
         // demoUrl: "/jackie - port - resin client.mp4",
         demoUrl:"#",
         techStack: ["React", "TypeScript", "Data Visualization", "AWS", "Mongo", "Mandrill"],
@@ -90,10 +92,11 @@ export const projects = [
       }, 
       {
         title: "Commercial Insurance App",
-        description: "Enterprise-scale high risk insurance application specifically for D&O insurance",
+        description: "Flexible insurance application framework for multi-app submissions",
         demoUrl: "https://program-submission.vercel.app/form/applicant-information",
         techStack: ["Next.js", "React", "TypeScript", "Node.js"], 
         imageUrl:'/program-submission.png',
+        timeline:'1 week',
         collaborators: [
           { name: "Product Team", role: "Requirements & Business Logic" },
           { name: "UI/UX Team", role: "Design System & User Flow" },

@@ -11,7 +11,7 @@ import { Eye } from 'lucide-react';
 import ProjectDetailsDialog from './modal';
 import React from 'react';
 
-export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, techStack, imageUrl, learnings = [], outcomes = [], impact = "", collaborators = [] }) => {
+export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, techStack, imageUrl, timeline, learnings = [], outcomes = [], impact = "", collaborators = [] }) => {
     const isViewable = demoUrl && demoUrl !== "#";
     const [showDetails, setShowDetails] = React.useState(false);
     return (
@@ -70,30 +70,43 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
             ))}
           </div>
         </CardContent>
-        <CardFooter className="mt-auto pt-4">
-          <Button 
-            variant="outline" 
-            className="w-full"
-            onClick={() => setShowDetails(true)}
-          >
-            Learn More
-          </Button>
+        <CardFooter className="mt-auto pt-4 flex flex-col gap-3">
+  <TooltipProvider>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <h2 className="text-xs text-accent hover:text-primary uppercase tracking-wider cursor-pointer transition-colors">
+          {timeline}
+        </h2>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>Concept to completion timeline</p>
+      </TooltipContent>
+    </Tooltip>
+  </TooltipProvider>
 
-          <ProjectDetailsDialog
-            isOpen={showDetails}
-            onClose={() => setShowDetails(false)}
-            project={{
-              title,
-              description,
-              tools: techStack,
-              collaborators,
-              learnings,
-              outcomes,
-              impact,
-              imageUrl
-            }}
-          />
-        </CardFooter>
+  <Button
+    variant="outline"
+    className="w-full"
+    onClick={() => setShowDetails(true)}
+  >
+    Learn More
+  </Button>
+  
+  <ProjectDetailsDialog
+    isOpen={showDetails}
+    onClose={() => setShowDetails(false)}
+    project={{
+      title,
+      description,
+      tools: techStack,
+      collaborators,
+      learnings,
+      outcomes,
+      impact,
+      imageUrl
+    }}
+  />
+</CardFooter>
       </Card>
     </motion.div>
   );

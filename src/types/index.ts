@@ -14,6 +14,7 @@ export interface Project {
     demoUrl: string;
     techStack: string[];
     imageUrl: string;
+    timeline?: string;
     // New fields
     learnings?: string[];      // Optional array of learning points
     outcomes?: string[];       // Optional array of project outcomes
