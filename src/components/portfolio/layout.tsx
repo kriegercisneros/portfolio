@@ -235,7 +235,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Header } from '@/components/portfolio/components/header';
 import { Projects } from '@/components/portfolio/components/projects';
 import { TechnicalSkills } from '@/components/portfolio/components/technicalSkills';
-import AboutMe from './components/about';
+// import AboutMe from './components/about';
+import SystemArchitecture from './components/systemArchitecture';
 import { Footer } from '@/components/portfolio/components/footer';
 import { FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -313,7 +314,7 @@ const PortfolioLayout: React.FC = () => {
           <TabsList className="mb-8">
             <TabsTrigger value="projects">Projects</TabsTrigger>
             <TabsTrigger value="skills">Technical Skills</TabsTrigger>
-            {/* <TabsTrigger value="about">About</TabsTrigger> */}
+            <TabsTrigger value="architecture">Architecture</TabsTrigger>
           </TabsList>
           
           <TabsContent value="projects">
@@ -324,8 +325,8 @@ const PortfolioLayout: React.FC = () => {
             <TechnicalSkills />
           </TabsContent>
           
-          <TabsContent value="about">
-            <AboutMe />
+          <TabsContent value="architecture">
+            <SystemArchitecture />
           </TabsContent>
         </Tabs>
       </main>

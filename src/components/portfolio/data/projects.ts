@@ -116,11 +116,58 @@ export const projects = [
         ],
         impact: "Transformed the D&O insurance application process from a manual, error-prone workflow to a streamlined digital experience. The platform significantly reduced underwriting time, improved data accuracy, and enhanced the overall user experience for both insurance brokers and applicants."
       },
-    //   {
-    //     title: "Simple Sketch",
-    //     description: "Cash Should I put this in?",
-    //     demoUrl: "#",
-    //     techStack: ["React", "TypeScript", "AWS", "Mongo"]
-    //   }, 
+
+      // {
+      //   title: "RBAC and Permissions",
+      //   description: "",
+      //   demoUrl: "",
+      //   techStack: ["Next.js", "React", "TypeScript", "Node.js"], 
+      //   imageUrl:'',
+      //   timeline:'1 week',
+      //   collaborators: [
+      //     { name: "Product Team", role: "Requirements & Business Logic" },
+      //     { name: "UI/UX Team", role: "Design System & User Flow" },
+      //     { name: "Insurance Experts", role: "Domain Knowledge & Validation" }, 
+      //     { name : "Client Side Development ", role : "Lead and Sole Developer"}
+      //   ],
+      //   learnings: [
+      //     "Implemented complex multi-step form validation with real-time error handling",
+      //     "Developed dynamic form generation based on business rules and user inputs",
+      //     "Created a robust state management system for handling large insurance applications",
+      //     "Built custom form components that maintain accessibility standards",
+      //   ],
+      //   outcomes: [
+      //     "Reduced application processing time from weeks to hours",
+      //     "Decreased broker to applicant touch points by offering in app rule logic",
+      //     "Improved data accuracy by implementing real-time validation",
+      //   ],
+      //   impact: "Transformed the D&O insurance application process from a manual, error-prone workflow to a streamlined digital experience. The platform significantly reduced underwriting time, improved data accuracy, and enhanced the overall user experience for both insurance brokers and applicants."
+      // },
+      // {
+      //   title: "Reminder Engine Resin Client",
+      //   description: "",
+      //   demoUrl: "",
+      //   techStack: ["Next.js", "React", "TypeScript", "Node.js"], 
+      //   imageUrl:'',
+      //   timeline:'1 week',
+      //   collaborators: [
+      //     { name: "Product Team", role: "Requirements & Business Logic" },
+      //     { name: "UI/UX Team", role: "Design System & User Flow" },
+      //     { name: "Insurance Experts", role: "Domain Knowledge & Validation" }, 
+      //     { name : "Client Side Development ", role : "Lead and Sole Developer"}
+      //   ],
+      //   learnings: [
+      //     "Implemented complex multi-step form validation with real-time error handling",
+      //     "Developed dynamic form generation based on business rules and user inputs",
+      //     "Created a robust state management system for handling large insurance applications",
+      //     "Built custom form components that maintain accessibility standards",
+      //   ],
+      //   outcomes: [
+      //     "Reduced application processing time from weeks to hours",
+      //     "Decreased broker to applicant touch points by offering in app rule logic",
+      //     "Improved data accuracy by implementing real-time validation",
+      //   ],
+      //   impact: "Transformed the D&O insurance application process from a manual, error-prone workflow to a streamlined digital experience. The platform significantly reduced underwriting time, improved data accuracy, and enhanced the overall user experience for both insurance brokers and applicants."
+      // },
   ];
   

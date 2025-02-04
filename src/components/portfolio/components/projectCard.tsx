@@ -27,28 +27,20 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
             <div className="flex-1 min-w-0">
               <CardTitle className="text-xl font-bold text-primary">{title}</CardTitle>
               <CardDescription className="text-primary-light">{description}</CardDescription>
+              <TooltipProvider>
+                <Tooltip>
+                <TooltipTrigger asChild>
+                    <h2 className="text-xs text-accent hover:text-primary uppercase tracking-wider cursor-pointer transition-colors">
+                    {timeline}
+                    </h2>
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>Concept to completion timeline</p>
+                </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
             </div>
-            {isViewable && (
-              <div className="flex-shrink-0">
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="w-10 h-10 hover:text-accent rounded-full flex items-center justify-center p-0"
-                        onClick={() => window.open(demoUrl, '_blank')}
-                      >
-                        <Eye className="h-5 w-5" />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>View Project</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </div>
-            )}
+            
           </div>
         </CardHeader>
         <CardContent className="flex-grow">
@@ -70,20 +62,28 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
             ))}
           </div>
         </CardContent>
-        <CardFooter className="mt-auto pt-4 flex flex-col gap-3">
-  <TooltipProvider>
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <h2 className="text-xs text-accent hover:text-primary uppercase tracking-wider cursor-pointer transition-colors">
-          {timeline}
-        </h2>
-      </TooltipTrigger>
-      <TooltipContent>
-        <p>Concept to completion timeline</p>
-      </TooltipContent>
-    </Tooltip>
-  </TooltipProvider>
-
+        {/* <CardFooter className="mt-auto pt-4 flex flex-col gap-3">
+        {isViewable && (
+              <div className="flex-shrink-0">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="w-10 h-10 hover:text-accent rounded-full flex items-center justify-center p-0"
+                        onClick={() => window.open(demoUrl, '_blank')}
+                      >
+                        <Eye className="h-5 w-5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>View Project</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+            )}
   <Button
     variant="outline"
     className="w-full"
@@ -92,6 +92,52 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
     Learn More
   </Button>
   
+  <ProjectDetailsDialog
+    isOpen={showDetails}
+    onClose={() => setShowDetails(false)}
+    project={{
+      title,
+      description,
+      tools: techStack,
+      collaborators,
+      learnings,
+      outcomes,
+      impact,
+      imageUrl
+    }}
+  />
+</CardFooter> */}
+<CardFooter className="mt-auto pt-4 flex flex-col gap-3">
+  <div className="w-full flex justify-between items-center">
+    <Button
+      variant="outline"
+      className="flex-1 mr-2"
+      onClick={() => setShowDetails(true)}
+    >
+      Learn More
+    </Button>
+    
+    {isViewable && (
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="w-10 h-10 hover:text-accent rounded-full flex items-center justify-center p-0"
+              onClick={() => window.open(demoUrl, '_blank')}
+            >
+              <Eye className="h-5 w-5" />
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>View Project</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    )}
+  </div>
+
   <ProjectDetailsDialog
     isOpen={showDetails}
     onClose={() => setShowDetails(false)}

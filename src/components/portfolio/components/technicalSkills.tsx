@@ -2,7 +2,7 @@
 "use client"
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Database, Server, Code, Cloud, Layout, Palette, Smartphone, LucideIcon} from 'lucide-react';
+import { Database, Server, Code, Cloud, Layout, Palette, Smartphone, LucideIcon, Users, Layers} from 'lucide-react';
 import { skills } from '../data/skills';
 // import type { Skill } from '@/types/index';
 
@@ -13,7 +13,9 @@ const iconMap: Record<string, LucideIcon> = {
   cloud:Cloud,
   layout:Layout, 
   palette:Palette,
-  smartphone:Smartphone
+  smartphone:Smartphone, 
+  users:Users, 
+  layers:Layers
 };
 
 export const TechnicalSkills = () => {
