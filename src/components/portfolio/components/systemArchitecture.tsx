@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // // /* eslint-disable @typescript-eslint/no-explicit-any */
 // // // // // import React, { useState } from 'react';
 // // // // // import { Database, Smartphone, Activity, Users } from 'lucide-react';
@@ -934,95 +935,87 @@
 
 
 
-import React from 'react';
-import { ResponsiveNetwork, ComputedNode } from '@nivo/network';
-import { motion } from 'framer-motion';
+import { ResponsiveNetworkCanvas } from '@nivo/network';
+import { FC } from 'react';
 
-const data = {
-  nodes: [
-    { id: 'data-lake', label: 'Data Lake (S3 on AWS)', type: 'database', cluster: 'data-stores' },
-    { id: 'mongo-client', label: 'Mongo Client', type: 'database', cluster: 'data-stores' },
-    { id: 'mongo-broker', label: 'Mongo Broker', type: 'database', cluster: 'data-stores' },
-    { id: 'mongo-submissions', label: 'Mongo Submissions', type: 'database', cluster: 'data-stores' },
-    { id: 'sql-market', label: 'SQL Market', type: 'database', cluster: 'data-stores' },
-    { id: 'risk-dashboard', label: 'Risk Management Dashboard', type: 'interface' },
-    { id: 'driver-app', label: 'Driver Onboarding', type: 'service' },
-    { id: 'analytics', label: 'Analytics Engine', type: 'service' },
-    { id: 'insurance-app', label: 'Insurance Platform', type: 'service' },
-  ],
-  links: [
-    { source: 'mongo-client', target: 'data-lake', label: 'Client Data' },
-    { source: 'mongo-broker', target: 'data-lake', label: 'Broker Data' },
-    { source: 'mongo-submissions', target: 'data-lake', label: 'Submission Data' },
-    { source: 'sql-market', target: 'data-lake', label: 'Market Data' },
-    { source: 'data-lake', target: 'risk-dashboard', label: 'Risk Metrics' },
-    { source: 'data-lake', target: 'driver-app', label: 'Driver Info' },
-    { source: 'data-lake', target: 'analytics', label: 'Analytics Data' },
-    { source: 'data-lake', target: 'insurance-app', label: 'Insurance Data' },
-  ],
-};
+// Define types for node and link data
+interface NodeData {
+    id: string;
+    color?: string;
+    height?: number;
+    [key: string]: any; // For additional dynamic properties
+}
 
-const getNodeColor = (node: { type: string }) => {
-  switch (node.type) {
-    case 'service':
-      return '#D2B48C'; // Tan color for services
-    case 'database':
-      return '#D8604C'; // Accent Default (Deeper Terracotta)
-    case 'interface':
-      return '#2D3436'; // Primary Default (Dark Gray)
-    default:
-      return '#636E72'; // Primary Light (Lighter Gray)
+interface LinkData {
+    source: string; // Changed to string (node ID)
+    target: string; // Changed to string (node ID)
+    distance:number;
+}
+
+interface NetworkData {
+    nodes: NodeData[];
+    links: LinkData[];
+}
+
+interface MyResponsiveNetworkCanvasProps {
+    data: NetworkData;
+}
+
+
+export interface NetworkNode {
+    id: string;
+    height: number;
+    size: number;
+    color: string;
   }
-};
-
-const PlatformFlow: React.FC = () => {
-  const handleNodeClick = (node: ComputedNode<{ id: string; label: string; type: string }>) => {
-    const nodeLabel = node.data?.label || node.id;
-    alert(`Clicked on ${nodeLabel}`);
+  
+  export interface NetworkLink {
+    source: string;
+    target: string;
+    distance: number;
+  }
+  
+  
+  // Sample usage:
+  export const networkData: NetworkData = {
+    nodes: [
+      {
+        id: "Node 0",
+        height: 2,
+        size: 32,
+        color: "rgb(244, 117, 96)"
+      },
+      // ... rest of your nodes
+    ],
+    links: [
+      {
+        source: "Node 0",
+        target: "Node 1",
+        distance: 80
+      },
+      // ... rest of your links
+    ]
   };
 
-  return (
-    <div className="w-full h-screen bg-gray-50 relative">
-      <ResponsiveNetwork
+const MyResponsiveNetworkCanvas: FC<MyResponsiveNetworkCanvasProps> = ({ data }) => (
+    <ResponsiveNetworkCanvas
         data={data}
-        margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-        linkDistance={80}
-        centeringStrength={0.8}
+        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        linkDistance={(link) => {
+            const sourceNode = data.nodes.find((n) => n.id === (link.source as any).id);
+            const targetNode = data.nodes.find((n) => n.id === (link.target as any).id);
+            return 50 + (sourceNode?.height ?? 0) + (targetNode?.height ?? 0); // Dynamic distance based on node height
+        }}
+        centeringStrength={0.3}
         repulsivity={6}
-        nodeColor={(node) => getNodeColor(node)}
+        nodeColor={('#888')} // Fallback color
         nodeBorderWidth={1}
-        nodeBorderColor={{ from: 'color', modifiers: [['darker', 0.8]] }}
-        linkThickness={2}
-        linkColor={{ from: 'source.color' }}
-        motionConfig="wobbly"
-        onClick={handleNodeClick}
-        layers={['links', 'nodes', 'labels']}
-      />
+        nodeBorderColor={{
+            from: 'color',
+            modifiers: [['darker', 0.8]],
+        }}
+        linkThickness={(link) => 2 + 2 * (data.nodes.find((n) => n.id === (link.target as any).id)?.height ?? 1)} // Get height from target node
+    />
+);
 
-      <motion.div 
-        className="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg border border-gray-200 max-w-sm"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-2xl font-bold text-primary mb-4">Insurance Platform Architecture</h2>
-        <div className="flex gap-4">
-          <div className="flex items-center">
-            <div className="w-4 h-4 rounded-full bg-[#D2B48C] mr-2" />
-            <span className="text-sm text-gray-700">Services</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-4 h-4 rounded-full bg-[#D8604C] mr-2" />
-            <span className="text-sm text-gray-700">Data Stores</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-4 h-4 rounded-full bg-[#2D3436] mr-2" />
-            <span className="text-sm text-gray-700">Interfaces</span>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  );
-};
-
-export default PlatformFlow;
+export default MyResponsiveNetworkCanvas;

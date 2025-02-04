@@ -238,6 +238,7 @@ import { TechnicalSkills } from '@/components/portfolio/components/technicalSkil
 // import AboutMe from './components/about';
 import SystemArchitecture from './components/systemArchitecture';
 import { Footer } from '@/components/portfolio/components/footer';
+import { networkData } from './components/systemArchitecture';
 import { FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -326,7 +327,10 @@ const PortfolioLayout: React.FC = () => {
           </TabsContent>
           
           <TabsContent value="architecture">
-            <SystemArchitecture />
+            <div >
+              <SystemArchitecture data={networkData} />
+            </div>
+            
           </TabsContent>
         </Tabs>
       </main>
