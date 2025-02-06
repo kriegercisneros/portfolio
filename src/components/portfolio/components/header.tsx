@@ -126,10 +126,10 @@ export const Header = () => {
   };
 
   const navItems = [
-    { title: 'Portfolio', path: '/' },
+    // { title: 'Portfolio', path: '/' },
     { title: 'Tech Consulting', path: '/consulting' },
     { title: 'Contact', path: '/contact' },
-    { title: 'About', path: '/about'}
+    { title: 'About', path: '/'}
   ];
 
   const isActive = (path: string) => {
@@ -161,7 +161,7 @@ export const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center h-16">
             <Link href="/" className="text-xl font-semibold font-serif text-primary">
-              Adiantum
+              Jacqueline Krieger, Software Developer
             </Link>
             <div className="mx-4 h-16 hidden md:block">
               <div className="h-full w-px bg-gray-900" />
