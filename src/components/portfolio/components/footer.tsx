@@ -32,7 +32,7 @@ export const Footer = () => {
             variant="ghost"
             size="icon"
             className="hover:text-primary hover:bg-secondary/10"
-            onClick={() => window.location.href = 'mailto:krieger.jacqueline@gmail.com'}
+            onClick={() => window.location.href = 'mailto:jackie@adiantum.ai'}
           >
             <Mail className="h-6 w-6" />
             <span className="sr-only">Email</span>

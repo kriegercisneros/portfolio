@@ -315,7 +315,7 @@ const PortfolioLayout: React.FC = () => {
           <TabsList className="mb-8">
             <TabsTrigger value="projects">Projects</TabsTrigger>
             <TabsTrigger value="skills">Technical Skills</TabsTrigger>
-            <TabsTrigger value="architecture">Architecture</TabsTrigger>
+            {/* <TabsTrigger value="architecture">Architecture</TabsTrigger> */}
           </TabsList>
           
           <TabsContent value="projects">
