@@ -5,6 +5,7 @@ export const projects = [
         title: "Risk Manager Dashboard",
         description: "Analytics and reporting platform with customizable dashboards",
         demoUrl: "https://arrowhead-analytics-gilt.vercel.app/book-of-business",
+        overview:"An advanced analytics and reporting platform that transforms complex business requirements into an intuitive, customizable dashboard experience. This solution empowers users to visualize critical data in real-time, leveraging a resilient, modular design designed for easy future enhancements.",
         techStack: ["Next.js", "React", "TypeScript", "Custom Data Visualization", "Redux"],
         imageUrl: "/program-analytics-agency-screen.png",
         timeline:'6 weeks',
@@ -14,13 +15,16 @@ export const projects = [
           "Developed a robust state management system, laying the groundwork for personalized and resilient dashboard experiences",
           "Optimized the development workflow, delivering a complete analytics front-end in just 6 weeks"
         ],
-        outcomes: [
-          "Delivered complete analytics platform in rapid 6-week timeline",
-          "Implemented innovative dashboard personalization feature allowing users to pin and customize their view",
-          "Created flexible component architecture that supported both standard and personalized views",
-          "Enabled project managers to build custom dashboards tailored to their specific needs"
+        technicalConsiderations:[
+          "Designed the architecture with scalability and future integrations in mind, employing scalable design patterns inspired by CQRS and hexagonal architectures.", 
+          "Incorporated real-time data handling and distributed data flows to ensure resilience under high load.",
         ],
-        impact: "Built and delivered a powerful analytics platform in just 6 weeks that not only provided clear insights but empowered each project manager to create their own personalized dashboard experience, significantly enhancing their workflow efficiency",
+        outcomes: [
+          "Delivered a powerful, full-featured analytics platform in an accelerated timeline.",
+          "Enabled project managers to customize their dashboard views, significantly enhancing workflow efficiency.",
+          "Established a flexible component architecture that supports both standard and tailored visualizations, positioning the solution for ongoing evolution."
+        ],
+        impact: "",
         collaborators: [
           {
             name: "Business Leadership Team",

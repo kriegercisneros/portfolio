@@ -12,6 +12,7 @@ export interface Project {
     title: string;
     description: string;
     demoUrl: string;
+    overview?:string;
     techStack: string[];
     imageUrl: string;
     timeline?: string;
@@ -20,6 +21,7 @@ export interface Project {
     outcomes?: string[];       // Optional array of project outcomes
     impact?: string;          // Optional impact statement
     collaborators?: Collaborator[]; // Optional array of collaborators
+    technicalConsiderations?:string[]
   }
   
   export interface Skill {

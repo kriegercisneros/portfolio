@@ -155,69 +155,74 @@ export const Header = () => {
         />
       </div>
 
-      {/* Navigation Bar */}
-      <div className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-sm z-50 border-b border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center h-16">
+
+    <div className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-sm z-50 border-b border-gray-900">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center h-16">
             <Link href="/" className="text-xl font-semibold font-serif text-primary">
               Adiantum
             </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={`text-sm font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-gray-900 border-gray-900 border px-3 rounded-md'
-                      : 'text-gray-600 hover:text-primary'
-                  }`}
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-white border-t border-gray-200"
-          >
-            <div className="container mx-auto px-4 py-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={`block py-2 text-sm font-medium ${
-                    isActive(item.path)
-                      ? 'text-white bg-primary px-3 rounded-md'
-                      : 'text-gray-600 hover:text-primary'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.title}
-                </Link>
-              ))}
+            <div className="mx-4 h-16 hidden md:block">
+              <div className="h-full w-px bg-gray-900" />
             </div>
-          </motion.div>
-        )}
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(item.path)
+                    ? 'text-gray-900 border-gray-900 border px-3 rounded-md'
+                    : 'text-gray-600 hover:text-primary'
+                }`}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          className="md:hidden bg-white border-t border-gray-200"
+        >
+          <div className="container mx-auto px-4 py-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`block py-2 text-sm font-medium ${
+                  isActive(item.path)
+                    ? 'text-white bg-primary px-3 rounded-md'
+                    : 'text-gray-600 hover:text-primary'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+      )}
+    </div>
 
       {/* Rest of your content remains the same */}
       <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16">

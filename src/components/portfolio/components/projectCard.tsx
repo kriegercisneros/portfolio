@@ -11,7 +11,7 @@ import { Eye } from 'lucide-react';
 import ProjectDetailsDialog from './modal';
 import React from 'react';
 
-export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, techStack, imageUrl, timeline, learnings = [], outcomes = [], impact = "", collaborators = [] }) => {
+export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, overview, techStack, imageUrl, timeline, learnings = [], outcomes = [], impact = "", collaborators = [], technicalConsiderations=[] }) => {
     const isViewable = demoUrl && demoUrl !== "#";
     const [showDetails, setShowDetails] = React.useState(false);
     return (
@@ -149,7 +149,9 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, te
       learnings,
       outcomes,
       impact,
-      imageUrl
+      imageUrl, 
+      overview, 
+      technicalConsiderations
     }}
   />
 </CardFooter>

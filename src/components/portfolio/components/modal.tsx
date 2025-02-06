@@ -1,3 +1,4 @@
+
 // import React from 'react';
 // import {
 //   Dialog,
@@ -32,15 +33,16 @@
 // }) => {
 //   return (
 //     <Dialog open={isOpen} onOpenChange={onClose}>
-//       <DialogContent className="max-w-3xl max-h-[90vh]">
-//         <DialogHeader>
+//       <DialogContent className="max-w-3xl h-[90vh] flex flex-col p-0">
+//         <DialogHeader className="p-6 pb-0">
 //           <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
 //           <DialogDescription className="text-lg mt-2">
 //             {project.description}
 //           </DialogDescription>
 //         </DialogHeader>
-//         <ScrollArea className="mt-6">
-//           <div className="space-y-8 pr-6">
+        
+//         <ScrollArea className="flex-1 p-6 pt-0">
+//           <div className="space-y-8 pr-4">
 //             {/* Project Image */}
 //             {/* <div className="w-full h-64 rounded-lg overflow-hidden">
 //               <img
@@ -141,6 +143,8 @@ interface ProjectDetailsProps {
     outcomes: string[];
     impact: string;
     imageUrl: string;
+    overview?: string;
+    technicalConsiderations?: string[];
   };
 }
 
@@ -161,14 +165,18 @@ const ProjectDetailsDialog: React.FC<ProjectDetailsProps> = ({
         
         <ScrollArea className="flex-1 p-6 pt-0">
           <div className="space-y-8 pr-4">
-            {/* Project Image */}
-            {/* <div className="w-full h-64 rounded-lg overflow-hidden">
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-            </div> */}
+            {/* Project Overview */}
+            {project.overview && (
+              <>
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Project Overview</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {project.overview}
+                  </p>
+                </div>
+                <Separator />
+              </>
+            )}
 
             {/* Tools Used */}
             <div>
@@ -183,6 +191,24 @@ const ProjectDetailsDialog: React.FC<ProjectDetailsProps> = ({
             </div>
 
             <Separator />
+
+            {/* Technical Considerations */}
+            {project.technicalConsiderations && project.technicalConsiderations.length > 0 && (
+              <>
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Technical Considerations</h3>
+                  <ul className="space-y-2">
+                    {project.technicalConsiderations.map((consideration, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-accent mr-2">•</span>
+                        <span className="text-muted-foreground">{consideration}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <Separator />
+              </>
+            )}
 
             {/* Collaborators */}
             {project.collaborators && project.collaborators.length > 0 && (
