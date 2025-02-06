@@ -3,17 +3,16 @@ export const projects = [
 
       {
         title: "Risk Manager Dashboard",
-        description: "Advanced analytics and reporting platform with customizable dashboards",
+        description: "Analytics and reporting platform with customizable dashboards",
         demoUrl: "https://arrowhead-analytics-gilt.vercel.app/book-of-business",
-        techStack: ["Next.js", "React", "TypeScript", "Data Visualization"],
+        techStack: ["Next.js", "React", "TypeScript", "Custom Data Visualization", "Redux"],
         imageUrl: "/program-analytics-agency-screen.png",
         timeline:'6 weeks',
         learnings: [
           "Translated complex business requirements into intuitive UI/UX patterns",
-          "Designed and implemented custom data visualization components",
-          "Developed a state management system for personalized dashboard experiences",
-          "Optimized development workflow to deliver full platform in 6 weeks",
-          "Created dynamic component pinning system for custom dashboard layouts"
+          "Engineered custom data visualization components with an eye toward scalability and dynamic data flows",
+          "Developed a robust state management system, laying the groundwork for personalized and resilient dashboard experiences",
+          "Optimized the development workflow, delivering a complete analytics front-end in just 6 weeks"
         ],
         outcomes: [
           "Delivered complete analytics platform in rapid 6-week timeline",
@@ -28,8 +27,8 @@ export const projects = [
             role: "Requirements & Vision"
           },
           {
-            name: "Project Managers",
-            role: "User Testing & Feedback"
+            name: "Project Managers and Users",
+            role: "Continious Feedback to UX"
           }
         ]
       },

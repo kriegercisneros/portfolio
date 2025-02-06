@@ -172,7 +172,7 @@ export const Header = () => {
                   className={`text-sm font-medium transition-colors ${
                     isActive(item.path)
                       ? 'text-gray-900 border-gray-900 border px-3 rounded-md'
-                      : 'text-gray-500 hover:text-primary'
+                      : 'text-gray-600 hover:text-primary'
                   }`}
                 >
                   {item.title}
