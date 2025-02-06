@@ -159,7 +159,7 @@ export const Header = () => {
       <div className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-sm z-50 border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-xl font-semibold text-primary">
+            <Link href="/" className="text-xl font-semibold font-serif text-primary">
               Adiantum
             </Link>
 
@@ -171,8 +171,8 @@ export const Header = () => {
                   href={item.path}
                   className={`text-sm font-medium transition-colors ${
                     isActive(item.path)
-                      ? 'text-white bg-primary px-3 py-1 rounded-md'
-                      : 'text-gray-600 hover:text-primary'
+                      ? 'text-gray-900 border-gray-900 border px-3 rounded-md'
+                      : 'text-gray-500 hover:text-primary'
                   }`}
                 >
                   {item.title}
