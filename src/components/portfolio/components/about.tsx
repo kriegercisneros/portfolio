@@ -274,7 +274,7 @@ const AboutMe = () => {
               >
                 <span className="text-2xl">{item.icon}</span>
                 <div>
-                  <h3 className="font-semibold text-primary mb-1">{item.title}</h3>
+                  <h3 className="font-semibold text-primary mb-1 pt-1">{item.title}</h3>
                   <p className="text-primary-light text-sm">{item.description}</p>
                 </div>
               </motion.div>
