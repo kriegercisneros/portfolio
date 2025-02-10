@@ -66,7 +66,7 @@ export const Header = () => {
               Jacqueline Krieger, Software Developer
             </Link>
             <div className="mx-4 h-16 hidden md:block">
-              <div className="h-full w-px bg-gray-900" />
+              {/* <div className="h-full w-px bg-gray-900" /> */}
             </div>
           </div>
 
@@ -126,7 +126,6 @@ export const Header = () => {
       )}
     </div>
 
-      {/* Rest of your content remains the same */}
       <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16">
         <div className="container mx-auto">
           <motion.header

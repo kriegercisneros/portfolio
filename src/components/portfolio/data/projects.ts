@@ -3,10 +3,10 @@ export const projects = [
 
       {
         title: "Risk Manager Dashboard",
-        description: "Analytics and reporting platform with customizable dashboards",
+        description: "Analytics and reporting UI with customizable dashboards",
         demoUrl: "https://arrowhead-analytics-gilt.vercel.app/book-of-business",
-        overview:"An advanced analytics and reporting platform that transforms complex business requirements into an intuitive, customizable dashboard experience. This solution empowers users to visualize critical data in real-time, leveraging a resilient, modular design designed for easy future enhancements.",
-        techStack: ["Next.js", "React", "TypeScript", "Custom Data Visualization", "Redux"],
+        overview:"An advanced analytics and reporting platform that transformed complex business requirements into an intuitive, customizable dashboard experience. This solution empowers users to visualize critical data in real-time, leveraging a resilient, modular design designed for easy future enhancements.",
+        techStack: ["Next.js", "UI/UX", "Custom Tailwind Config", "TypeScript", "Custom Data Visualization", "Redux"],
         imageUrl: "/program-analytics-agency-screen.png",
         timeline:'6 weeks',
         learnings: [
@@ -38,9 +38,9 @@ export const projects = [
       },
       {
         title: "Next-Gen Driver Onboarding",
-        description: "Mobile-first driver compliance and management app",
+        description: "Mobile-first driver compliance app with intelligent document processing",
         demoUrl: "#",
-        techStack: ["React", "AWS", "Node.js", "TypeScript", "Express.js", "Mongo"], 
+        techStack: ["React", "AWS", "Node.js", "TypeScript", "Express.js", "Mongo", "OTP Lib"], 
         imageUrl:'/mobile.png', 
         timeline:'10 weeks',
         collaborators: [
@@ -96,9 +96,9 @@ export const projects = [
       }, 
       {
         title: "Commercial Insurance App",
-        description: "Flexible insurance application framework for multi-app submissions",
+        description: "Rule based insurance application featuring dependent-question custom form",
         demoUrl: "https://program-submission.vercel.app/form/applicant-information",
-        techStack: ["Next.js", "React", "TypeScript", "Node.js"], 
+        techStack: ["Next.js", "UI/UX", "Custom Form Engine", "TypeScript", "Node.js"], 
         imageUrl:'/program-submission.png',
         timeline:'1 week',
         collaborators: [
