@@ -40,7 +40,7 @@ export const projects = [
         title: "Next-Gen Driver Onboarding",
         description: "Mobile-first driver compliance and management app",
         demoUrl: "#",
-        techStack: ["React", "AWS", "Node.js", "TypeScript", "Mongo"], 
+        techStack: ["React", "AWS", "Node.js", "TypeScript", "Express.js", "Mongo"], 
         imageUrl:'/mobile.png', 
         timeline:'10 weeks',
         collaborators: [
@@ -65,8 +65,9 @@ export const projects = [
         description: " Location Risk Management Platform",
         // demoUrl: "/jackie - port - resin client.mp4",
         demoUrl:"#",
-        techStack: ["React", "TypeScript", "Data Visualization", "AWS", "Mongo", "Mandrill"],
-        imageUrl:'/resin-client.png', 
+        techStack: ["React", "TypeScript", "Data Visualization", "Express.js", "AWS", "Mongo", "Mandrill"],
+        imageUrl:'/resin-client.png',
+        timeline:"12 weeks", 
         learnings: [
             "Architected and implemented complete full-stack solution from database to deployment",
             "Designed scalable MongoDB schema and API architecture for complex program management",
@@ -120,57 +121,57 @@ export const projects = [
         impact: "Transformed the D&O insurance application process from a manual, error-prone workflow to a streamlined digital experience. The platform significantly reduced underwriting time, improved data accuracy, and enhanced the overall user experience for both insurance brokers and applicants."
       },
 
-      // {
-      //   title: "RBAC and Permissions",
-      //   description: "",
-      //   demoUrl: "",
-      //   techStack: ["Next.js", "React", "TypeScript", "Node.js"], 
-      //   imageUrl:'',
-      //   timeline:'1 week',
-      //   collaborators: [
-      //     { name: "Product Team", role: "Requirements & Business Logic" },
-      //     { name: "UI/UX Team", role: "Design System & User Flow" },
-      //     { name: "Insurance Experts", role: "Domain Knowledge & Validation" }, 
-      //     { name : "Client Side Development ", role : "Lead and Sole Developer"}
-      //   ],
-      //   learnings: [
-      //     "Implemented complex multi-step form validation with real-time error handling",
-      //     "Developed dynamic form generation based on business rules and user inputs",
-      //     "Created a robust state management system for handling large insurance applications",
-      //     "Built custom form components that maintain accessibility standards",
-      //   ],
-      //   outcomes: [
-      //     "Reduced application processing time from weeks to hours",
-      //     "Decreased broker to applicant touch points by offering in app rule logic",
-      //     "Improved data accuracy by implementing real-time validation",
-      //   ],
-      //   impact: "Transformed the D&O insurance application process from a manual, error-prone workflow to a streamlined digital experience. The platform significantly reduced underwriting time, improved data accuracy, and enhanced the overall user experience for both insurance brokers and applicants."
-      // },
-      // {
-      //   title: "Reminder Engine Resin Client",
-      //   description: "",
-      //   demoUrl: "",
-      //   techStack: ["Next.js", "React", "TypeScript", "Node.js"], 
-      //   imageUrl:'',
-      //   timeline:'1 week',
-      //   collaborators: [
-      //     { name: "Product Team", role: "Requirements & Business Logic" },
-      //     { name: "UI/UX Team", role: "Design System & User Flow" },
-      //     { name: "Insurance Experts", role: "Domain Knowledge & Validation" }, 
-      //     { name : "Client Side Development ", role : "Lead and Sole Developer"}
-      //   ],
-      //   learnings: [
-      //     "Implemented complex multi-step form validation with real-time error handling",
-      //     "Developed dynamic form generation based on business rules and user inputs",
-      //     "Created a robust state management system for handling large insurance applications",
-      //     "Built custom form components that maintain accessibility standards",
-      //   ],
-      //   outcomes: [
-      //     "Reduced application processing time from weeks to hours",
-      //     "Decreased broker to applicant touch points by offering in app rule logic",
-      //     "Improved data accuracy by implementing real-time validation",
-      //   ],
-      //   impact: "Transformed the D&O insurance application process from a manual, error-prone workflow to a streamlined digital experience. The platform significantly reduced underwriting time, improved data accuracy, and enhanced the overall user experience for both insurance brokers and applicants."
-      // },
+      {
+        title: "RBAC, Risk Management",
+        description: "Comprehensive RBAC system for the client and server",
+        demoUrl: "",
+        techStack: ["JWTokens", "Sessions", "Node.js"], 
+        imageUrl:'/access-control-1.png',
+        timeline:'6 weeks',
+        collaborators: [
+          { name: "System Architect", role: "Technical Design Review" },
+          { name: "DevOps Team", role: "Infrastructure Setup" },
+          { name: "Lead Developer", role: "Implementation & Testing" }
+        ],
+        learnings: [
+          "Architected hierarchical role structures with inheritance patterns for flexible permission management",
+          "Implemented session-based permission boundaries for enhanced security and resource isolation",
+          "Developed middleware for role-based route protection and API access control",
+          "Created efficient caching mechanisms for role and permission checks to optimize performance"
+        ],
+        outcomes: [
+          "Achieved SOC 2 compliance requirements for access control",
+          "Reduced unauthorized access",
+          "Implemented real-time permission updates across systems"
+        ],
+        impact: "Established a secure, scalable RBAC foundation in the Risk Management Center that enabled enterprise-grade access control while maintaining system performance. The implementation significantly reduced security incidents, streamlined user management, and provided audit-ready access tracking across the platform."
+      },
+      {
+        title: "Reminder System, Risk Management",
+        description: "Automated compliance monitoring system",
+        demoUrl: "",
+        techStack: ["AWS Lambda", "Node.js", "Mandrill API", "CloudWatch"],
+        imageUrl: '/reminder-system.png',
+        timeline: '5 weeks',
+        collaborators: [
+          { name: "Fleet Management Team", role: "Business Requirements" },
+          { name: "DevOps Team", role: "AWS Infrastructure" },
+          { name: "Database Team", role: "Data Schema Design" },
+          { name: "Lead Developer", role: "Implementation & Testing" }
+        ],
+        learnings: [
+          "Designed event-driven architecture for automated compliance monitoring",
+          "Implemented sophisticated notification schedules with AWS CloudWatch",
+          "Created fault-tolerant database querying system with retry mechanisms",
+          "Developed scalable email templating system for different notification types"
+        ],
+        outcomes: [
+          "Automated monitoring of many driver records daily",
+          "Reduced compliance gaps through timely notifications",
+          "Achieved near 100% notification delivery rate",
+          "Decreased manual compliance checks"
+        ],
+        impact: "Transformed fleet compliance management by automating the monitoring and notification process. The system proactively manages driver compliance, reducing risk exposure and administrative overhead while ensuring timely resolution of licensing, insurance, and MVR issues."
+      }
   ];
   

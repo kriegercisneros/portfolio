@@ -21,7 +21,7 @@ export const ProjectCard: React.FC<Project> = ({ title, description, demoUrl, ov
       transition={{ duration: 0.5 }}
       className="w-full"
     >
-      <Card className="h-full shadow-medium hover:shadow-large transition-all duration-100 flex flex-col">
+      <Card className="h-full shadow-medium hover:shadow-large transition-all flex flex-col">
         <CardHeader>
           <div className="flex justify-between items-center gap-4">
             <div className="flex-1 min-w-0">
