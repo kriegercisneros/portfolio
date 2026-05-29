@@ -1,10 +1,5 @@
-import ComingSoon from '@/components/portfolio/components/commingSoon';
+import { redirect } from 'next/navigation';
 
 export default function ConsultingPage() {
-  return (
-    <ComingSoon
-      title="Consulting Services Coming Soon"
-      subtitle="We're preparing to offer expert technical consulting services. Stay tuned!"
-    />
-  );
+  redirect('/');
 }

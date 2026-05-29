@@ -6,7 +6,10 @@ export const Footer = () => {
   return (
     <footer className="mt-16 pb-8">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl font-semibold text-primary text-center mb-6">Connect With Me</h2>
+        <h2 className="text-2xl font-semibold text-primary text-center mb-3">Get in Touch</h2>
+        <p className="text-sm text-gray-500 text-center mb-6">
+          Open to senior technical leadership, architecture, and contract opportunities.
+        </p>
         <div className="flex justify-center gap-6">
           <Button
             variant="ghost"

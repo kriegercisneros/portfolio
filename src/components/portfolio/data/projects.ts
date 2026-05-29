@@ -1,6 +1,4 @@
 export const projects = [
-
-
       {
         title: "Risk Manager Dashboard",
         description: "Analytics and reporting UI with customizable dashboards",
@@ -174,4 +172,3 @@ export const projects = [
         impact: "Transformed fleet compliance management by automating the monitoring and notification process. The system proactively manages driver compliance, reducing risk exposure and administrative overhead while ensuring timely resolution of licensing, insurance, and MVR issues."
       }
   ];
-  

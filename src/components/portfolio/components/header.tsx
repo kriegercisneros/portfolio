@@ -2,14 +2,11 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { FileText, Menu, X } from 'lucide-react';
-import AboutMe from './about';
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
   
   const container = {
     hidden: { opacity: 0, y: 20 },
@@ -28,17 +25,21 @@ export const Header = () => {
   };
 
   const navItems = [
-    // { title: 'Portfolio', path: '/' },
-    // { title: 'Tech Consulting', path: '/consulting' },
-    // { title: 'Contact', path: '/contact' },
-    { title: 'About', path: '/'}
+    { title: 'WhaleHawk', path: '#whalehawk' },
+    { title: 'Experience', path: '#experience' },
+    { title: 'Skills', path: '#skills' },
+    { title: 'Contact', path: '#contact' },
   ];
 
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return pathname === '/' || pathname === '/portfolio';
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (path.startsWith('#')) {
+      e.preventDefault();
+      const element = document.getElementById(path.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      setIsMenuOpen(false);
     }
-    return pathname === path;
   };
 
   return (
@@ -63,7 +64,7 @@ export const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center h-16">
             <Link href="/" className="text-xl font-semibold font-serif text-primary">
-              Jacqueline Krieger, Software Developer
+              Jacqueline Krieger
             </Link>
             <div className="mx-4 h-16 hidden md:block">
               {/* <div className="h-full w-px bg-gray-900" /> */}
@@ -72,18 +73,15 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`text-sm font-medium transition-colors ${
-                  isActive(item.path)
-                    ? 'text-gray-900 border-gray-900 border px-3 rounded-md'
-                    : 'text-gray-600 hover:text-primary'
-                }`}
+            {navItems.map((navItem) => (
+              <a
+                key={navItem.path}
+                href={navItem.path}
+                onClick={(e) => handleNavClick(e, navItem.path)}
+                className="text-sm font-medium transition-colors text-gray-600 hover:text-primary"
               >
-                {item.title}
-              </Link>
+                {navItem.title}
+              </a>
             ))}
           </nav>
 
@@ -107,19 +105,15 @@ export const Header = () => {
           className="md:hidden bg-white border-t border-gray-200"
         >
           <div className="container mx-auto px-4 py-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`block py-2 text-sm font-medium ${
-                  isActive(item.path)
-                    ? 'text-white bg-primary px-3 rounded-md'
-                    : 'text-gray-600 hover:text-primary'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
+            {navItems.map((navItem) => (
+              <a
+                key={navItem.path}
+                href={navItem.path}
+                onClick={(e) => handleNavClick(e, navItem.path)}
+                className="block py-2 text-sm font-medium text-gray-600 hover:text-primary"
               >
-                {item.title}
-              </Link>
+                {navItem.title}
+              </a>
             ))}
           </div>
         </motion.div>
@@ -135,16 +129,18 @@ export const Header = () => {
             className="relative pt-8 pb-16"
           >
             <motion.div variants={item}>
-              <div className="flex items-center">
-                <h1 className="text-5xl font-bold text-primary tracking-tight mb-6">
-                  Jacqueline Krieger
-                </h1>
-                <AboutMe />
-              </div>
+              <h1 className="text-5xl font-bold text-primary tracking-tight mb-6">
+                Jacqueline Krieger
+              </h1>
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
-                <p className="text-lg md:text-xl text-primary-light max-w-2xl">
-                  High-velocity Full-Stack Developer driving resilient, scalable solutions
-                </p>
+                <div className="max-w-2xl">
+                  <p className="text-lg md:text-xl text-primary font-medium">
+                    Technical Founder · Platform Architect · Engineering Leader
+                  </p>
+                  <p className="text-sm md:text-base text-primary-light mt-2">
+                    Building real-time intelligence systems at WhaleHawk. From system design to team leadership.
+                  </p>
+                </div>
                 <Button
                   onClick={() => window.open('https://docs.google.com/document/d/e/2PACX-1vTf1iIYUDnZgBAcwPDVm12KkgTA_9D35sz6fYqJ5agtQRQ9Tx2QvqxMGC-Gg5gd4TUGzLjwDUps5p0R/pub', '_blank')}
                   variant="secondary"

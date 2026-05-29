@@ -1,10 +1,5 @@
-import ComingSoon from '@/components/portfolio/components/commingSoon';
+import { redirect } from 'next/navigation';
 
 export default function AboutPage() {
-  return (
-    <ComingSoon
-      title="About Page Coming Soon"
-      subtitle="We're crafting our story. Check back soon to learn more about us!"
-    />
-  );
+  redirect('/');
 }

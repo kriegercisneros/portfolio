@@ -2,25 +2,25 @@
 "use client"
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Database, Server, Code, Cloud, Layout, Palette, Smartphone, LucideIcon, Users, Layers} from 'lucide-react';
+import { Database, Server, Code, Cloud, Cpu, LucideIcon, Users, Layers } from 'lucide-react';
 import { skills } from '../data/skills';
 // import type { Skill } from '@/types/index';
 
 const iconMap: Record<string, LucideIcon> = {
   database: Database,
   server: Server,
-  code:Code, 
-  cloud:Cloud,
-  layout:Layout, 
-  palette:Palette,
-  smartphone:Smartphone, 
-  users:Users, 
-  layers:Layers
+  code: Code,
+  cloud: Cloud,
+  cpu: Cpu,
+  users: Users,
+  layers: Layers,
 };
 
 export const TechnicalSkills = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+    <div>
+      <h2 className="text-3xl font-bold text-primary font-serif mb-8">Technical Capabilities</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {skills.map((skill, index) => {
         const Icon = iconMap[skill.iconType];
         
@@ -49,6 +49,7 @@ export const TechnicalSkills = () => {
           </motion.div>
         );
       })}
+      </div>
     </div>
   );
 };
