@@ -169,13 +169,11 @@ export const WhaleHawkCaseStudy = () => {
               <div>
                 <p className="text-sm font-semibold text-primary mb-1">Engineering & Product Leadership</p>
                 <p className="text-sm text-gray-700 leading-relaxed">
-                  Leads the engineering team and sets technical direction across all services. Designed and
-                  built the entire engineering process and platform — best practices, CI/CD workflows, and
-                  internal team standards from scratch. Communicates directly with the CEO, translating
-                  business strategy into technical architecture. Represents WhaleHawk&apos;s technical system
-                  to prospects in an outward-facing role. Manages scope, priorities, and sequences work
-                  deliberately — phasing migrations so staging proves out before production, keeping working
-                  systems intact until replacements are battle-tested.
+                  Built the engineering process from scratch — CI/CD pipelines, team workflows, internal
+                  standards, and best practices that the team runs on today. Translates business strategy
+                  directly from the CEO into technical architecture and decides what gets built, how, and
+                  in what order. Represents WhaleHawk&apos;s technical system to prospects. Relentless about
+                  iteration until the process is right.
                 </p>
               </div>
             </div>
