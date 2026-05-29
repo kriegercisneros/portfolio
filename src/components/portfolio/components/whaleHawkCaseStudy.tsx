@@ -23,7 +23,7 @@ const subsystems = [
   },
   {
     title: "CRM Layer",
-    description: "Customer relationship management microservice managing client interactions, account data, and integration points across the platform.",
+    description: "CRM integration microservice that pulls data from HubSpot and Salesforce, translating client CRM data into context for WhaleHawk intelligence packages.",
     icon: Database,
   },
 ];
