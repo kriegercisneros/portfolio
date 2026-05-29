@@ -27,7 +27,6 @@ export const Header = () => {
   const navItems = [
     { title: 'WhaleHawk', path: '#whalehawk' },
     { title: 'Experience', path: '#experience' },
-    { title: 'Skills', path: '#skills' },
     { title: 'Contact', path: '#contact' },
   ];
 

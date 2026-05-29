@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Header } from '@/components/portfolio/components/header';
 import { Projects } from '@/components/portfolio/components/projects';
-import { TechnicalSkills } from '@/components/portfolio/components/technicalSkills';
 import { About } from '@/components/portfolio/components/about';
 import { WhaleHawkCaseStudy } from '@/components/portfolio/components/whaleHawkCaseStudy';
 import { Footer } from '@/components/portfolio/components/footer';
@@ -79,9 +78,6 @@ const PortfolioLayout: React.FC = () => {
           <Projects />
         </section>
 
-        <section id="skills" className="mb-16">
-          <TechnicalSkills />
-        </section>
       </main>
 
       <FloatingResumeButton visible={scrollProgress > 0.8} />
