@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/seperator';
-import { Layers, Cpu, Database, Globe, Users, GitBranch } from 'lucide-react';
+import { Layers, Cpu, Database, Globe, BarChart3, Users, GitBranch } from 'lucide-react';
 
 const subsystems = [
   {
@@ -26,11 +26,16 @@ const subsystems = [
     description: "CRM integration microservice that pulls data from HubSpot and Salesforce, translating client CRM data into context for WhaleHawk intelligence packages.",
     icon: Database,
   },
+  {
+    title: "Analytics",
+    description: "Vendor-specific recommendation engine built from financial data, translating the data analytics team's domain logic into a scalable, automated program.",
+    icon: BarChart3,
+  },
 ];
 
 const architectureDecisions = [
   "Designed the Entity Resolution System in a graph database to map relationships across the ecosystem, connecting all microservices to canonical entities",
-  "Architected microservice separation strategy across Source Pipeline, Intelligence Layer, App Server, and CRM Layer",
+  "Architected microservice separation strategy across Source Pipeline, Intelligence Layer, App Server, CRM Layer, and Analytics",
   "Built for multi-tenant scalability — external systems point TO WhaleHawk, not the other way around",
   "Engineered dual-container ECS deployment with async runtime isolation to prevent cross-service corruption",
 ];
