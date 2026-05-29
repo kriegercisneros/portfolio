@@ -36,7 +36,6 @@ const subsystems = [
 const architectureDecisions = [
   "Designed the Entity Resolution System in a graph database to map relationships across the ecosystem, connecting all microservices to canonical entities",
   "Architected microservice separation strategy across Source Pipeline, Intelligence Layer, App Server, CRM Layer, and Analytics",
-  "Built for multi-tenant scalability — external systems point TO WhaleHawk, not the other way around",
   "Engineered dual-container ECS deployment with async runtime isolation to prevent cross-service corruption",
 ];
 
