@@ -18,7 +18,7 @@ const subsystems = [
   },
   {
     title: "App Server",
-    description: "Core application server housing the Entity Resolution System, versioned retrieval endpoints, and multi-query vector search for consumer-facing APIs.",
+    description: "Core application server serving versioned retrieval endpoints and multi-query vector search for consumer-facing APIs.",
     icon: Globe,
   },
   {
@@ -29,7 +29,7 @@ const subsystems = [
 ];
 
 const architectureDecisions = [
-  "Designed the ENTITY RESOLUTION SYSTEM as the backbone connecting all microservices to canonical entities",
+  "Designed the Entity Resolution System in a graph database to map relationships across the ecosystem, connecting all microservices to canonical entities",
   "Architected microservice separation strategy across Source Pipeline, Intelligence Layer, App Server, and CRM Layer",
   "Built for multi-tenant scalability — external systems point TO WhaleHawk, not the other way around",
   "Engineered dual-container ECS deployment with async runtime isolation to prevent cross-service corruption",
