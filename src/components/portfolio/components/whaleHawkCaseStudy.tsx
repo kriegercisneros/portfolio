@@ -78,16 +78,21 @@ export const WhaleHawkCaseStudy = () => {
 
       {/* Overview */}
       <motion.div variants={item} className="mb-8">
-        <p className="text-base text-gray-700 leading-relaxed max-w-4xl">
-          Designed, architected, and built WhaleHawk&apos;s core infrastructure from the ground up.
-          WhaleHawk is an intelligence delivery mechanism designed for healthcare sales verticals.
-          At its core, WhaleHawk uses large language model technology to harness unstructured data
-          from across the web and turn it into structured content for contextual intelligence.
-          I designed a series of microservices to support this mission, enabling more data to flow in
-          regardless of source type. At the center, WhaleHawk employs an ENTITY RESOLUTION SYSTEM
-          designed to harness data from many different sources in order to generate the best contextual
-          intelligence in the market.
-        </p>
+        <div className="text-base text-gray-700 leading-relaxed max-w-4xl space-y-4">
+          <p>
+            Designed, architected, and built WhaleHawk&apos;s core infrastructure from the ground up.
+            WhaleHawk is an intelligence delivery mechanism built for healthcare sales verticals.
+          </p>
+          <p>
+            At its core, WhaleHawk uses large language model technology to transform unstructured data
+            from across the web into structured, contextual intelligence. I architected a series of
+            microservices to support this mission, enabling data to flow in regardless of source type.
+          </p>
+          <p>
+            At the center is the Entity Resolution System — designed to unify data from disparate sources
+            into canonical entities, powering the most relevant contextual intelligence in the market.
+          </p>
+        </div>
       </motion.div>
 
       {/* Architecture Subsystems */}
