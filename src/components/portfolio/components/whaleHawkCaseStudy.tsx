@@ -17,14 +17,14 @@ const subsystems = [
     icon: Cpu,
   },
   {
-    title: "Data Layer",
-    description: "PostgreSQL and Qdrant-backed storage with Alembic migrations, entity resolution, and vector indexing for semantic retrieval.",
-    icon: Database,
+    title: "App Server",
+    description: "Core application server housing the Entity Resolution System, versioned retrieval endpoints, and multi-query vector search for consumer-facing APIs.",
+    icon: Globe,
   },
   {
-    title: "Consumer APIs",
-    description: "Versioned retrieval endpoints with multi-query vector search, serving intelligence to downstream consumers and external integrations.",
-    icon: Globe,
+    title: "CRM Layer",
+    description: "Customer relationship management microservice managing client interactions, account data, and integration points across the platform.",
+    icon: Database,
   },
 ];
 
