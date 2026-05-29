@@ -31,14 +31,24 @@ const subsystems = [
     description: "Vendor-specific recommendation engine built from financial data, translating the data analytics team's domain logic into a scalable, automated program.",
     icon: BarChart3,
   },
+  {
+    title: "Live Scraping Engine",
+    description: "Custom-built technology that scrapes the internet live and at scale, feeding real-time unstructured data into the intelligence pipeline for processing.",
+    icon: Globe,
+  },
 ];
 
 
 const techStack = [
-  "Python", "FastAPI", "SQLAlchemy", "asyncio",
-  "AWS ECS", "EventBridge", "Secrets Manager",
-  "PostgreSQL", "Qdrant", "Alembic",
-  "OpenAI", "CI/CD",
+  "NestJS", "TypeScript", "Express.js",
+  "PostgreSQL", "Prisma", "Redis", "Pinecone",
+  "Anthropic Claude SDK", "OpenAI SDK", "LangChain", "LangGraph",
+  "Playwright", "Browserless.io", "Cheerio",
+  "AWS S3", "AWS ECS", "Secrets Manager", "Docker",
+  "BullMQ", "Sentry",
+  "Passport.js", "JWT", "Google OAuth",
+  "Stripe",
+  "Jest", "Supertest",
 ];
 
 const container = {
