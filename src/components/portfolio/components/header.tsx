@@ -141,7 +141,7 @@ export const Header = () => {
                   </p>
                 </div>
                 <Button
-                  onClick={() => window.open('https://docs.google.com/document/d/e/2PACX-1vTf1iIYUDnZgBAcwPDVm12KkgTA_9D35sz6fYqJ5agtQRQ9Tx2QvqxMGC-Gg5gd4TUGzLjwDUps5p0R/pub', '_blank')}
+                  onClick={() => window.open('/resume.pdf', '_blank')}
                   variant="secondary"
                   className="w-full md:w-auto bg-accent hover:bg-accent-dark text-white md:ml-8 whitespace-nowrap transition-colors duration-300"
                 >

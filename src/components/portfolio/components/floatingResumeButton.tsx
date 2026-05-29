@@ -17,7 +17,7 @@ const FloatingResumeButton = () => {
       animate={{ scale: 1 }}
       exit={{ scale: 0 }}
       className="fixed bottom-8 right-8 w-16 h-16 rounded-full bg-accent hover:bg-accent-dark text-white shadow-lg flex items-center justify-center transition-colors duration-300"
-      onClick={() => window.open('https://docs.google.com/document/d/e/2PACX-1vTf1iIYUDnZgBAcwPDVm12KkgTA_9D35sz6fYqJ5agtQRQ9Tx2QvqxMGC-Gg5gd4TUGzLjwDUps5p0R/pub', '_blank')}
+      onClick={() => window.open('/resume.pdf', '_blank')}
       aria-label="View Resume"
     >
       <FileText className="h-6 w-6" />

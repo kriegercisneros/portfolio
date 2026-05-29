@@ -23,7 +23,7 @@ const FloatingResumeButton: React.FC<FloatingResumeButtonProps> = ({ visible }) 
         animate={{ opacity: visible ? 1 : 0, scale: visible ? 1 : 0.5 }}
         transition={{ duration: 0.3 }}
         className="w-14 h-14 rounded-full bg-accent hover:bg-accent-dark text-white shadow-lg flex items-center justify-center transition-colors duration-300"
-        onClick={() => window.open('https://docs.google.com/document/d/e/2PACX-1vTf1iIYUDnZgBAcwPDVm12KkgTA_9D35sz6fYqJ5agtQRQ9Tx2QvqxMGC-Gg5gd4TUGzLjwDUps5p0R/pub', '_blank')}
+        onClick={() => window.open('/resume.pdf', '_blank')}
         aria-label="View Resume"
         style={{
           pointerEvents: visible ? 'auto' : 'none',
