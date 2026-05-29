@@ -39,17 +39,32 @@ const subsystems = [
 ];
 
 
-const techStack = [
-  "NestJS", "TypeScript", "Express.js",
-  "PostgreSQL", "Prisma", "Redis", "Pinecone",
-  "Anthropic Claude SDK", "OpenAI SDK", "LangChain", "LangGraph",
-  "Playwright", "Browserless.io", "Cheerio",
-  "AWS S3", "AWS ECS", "Secrets Manager", "Docker",
-  "BullMQ", "Sentry",
-  "Passport.js", "JWT", "Google OAuth",
-  "Stripe",
-  "Jest", "Supertest",
-];
+const techStack = {
+  "Languages & Frameworks": [
+    "Python 3 (async)", "FastAPI", "Uvicorn", "Pydantic",
+    "NestJS 11", "TypeScript", "Express.js",
+  ],
+  "Databases": [
+    "PostgreSQL", "SQLAlchemy 2.0", "Prisma", "Alembic",
+    "Qdrant", "Pinecone", "Redis",
+  ],
+  "AI / LLM": [
+    "OpenAI SDK", "Anthropic Claude SDK", "LangChain", "LangGraph",
+    "Faster Whisper", "BM25", "LangSmith",
+  ],
+  "Data Ingestion & Scraping": [
+    "Playwright", "Browserless.io", "Cheerio",
+    "Feedparser", "X (Twitter) API", "HTTPX",
+  ],
+  "Cloud & Infrastructure": [
+    "AWS ECS Fargate", "EventBridge", "S3", "ECR", "Secrets Manager",
+    "Docker", "GitHub Actions", "BullMQ", "Sentry",
+  ],
+  "Auth & Integrations": [
+    "Passport.js", "JWT", "Google OAuth",
+    "Stripe", "HubSpot", "Salesforce",
+  ],
+};
 
 const container = {
   hidden: { opacity: 0 },
@@ -126,12 +141,19 @@ export const WhaleHawkCaseStudy = () => {
 
       {/* Tech Stack */}
       <motion.div variants={item} className="mb-8">
-        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Stack</h3>
-        <div className="flex flex-wrap gap-2">
-          {techStack.map((tech) => (
-            <Badge key={tech} variant="outline" className="text-sm">
-              {tech}
-            </Badge>
+        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Stack</h3>
+        <div className="space-y-3">
+          {Object.entries(techStack).map(([category, items]) => (
+            <div key={category}>
+              <p className="text-xs font-medium text-gray-400 mb-1.5">{category}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {items.map((tech) => (
+                  <Badge key={tech} variant="outline" className="text-xs">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </motion.div>
