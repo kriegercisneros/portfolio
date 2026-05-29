@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/seperator';
-import { Layers, Cpu, Database, Globe, BarChart3, Users, GitBranch } from 'lucide-react';
+import { Layers, Cpu, Database, Globe, BarChart3, Users } from 'lucide-react';
 
 const subsystems = [
   {
@@ -33,11 +33,6 @@ const subsystems = [
   },
 ];
 
-const architectureDecisions = [
-  "Designed the Entity Resolution System in a graph database to map relationships across the ecosystem, connecting all microservices to canonical entities",
-  "Architected microservice separation strategy across Source Pipeline, Intelligence Layer, App Server, CRM Layer, and Analytics",
-  "Engineered dual-container ECS deployment with async runtime isolation to prevent cross-service corruption",
-];
 
 const techStack = [
   "Python", "FastAPI", "SQLAlchemy", "asyncio",
@@ -117,28 +112,6 @@ export const WhaleHawkCaseStudy = () => {
             </Card>
           );
         })}
-      </motion.div>
-
-      {/* Architecture Decisions */}
-      <motion.div variants={item} className="mb-8">
-        <Card className="border border-gray-200">
-          <CardHeader className="pb-2">
-            <CardTitle className="flex items-center gap-2 text-lg font-serif">
-              <GitBranch className="h-5 w-5 text-accent" />
-              Architecture Decisions
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-2">
-              {architectureDecisions.map((decision, index) => (
-                <li key={index} className="text-sm text-gray-700 flex items-start gap-2">
-                  <span className="text-accent mt-1 shrink-0">&#8226;</span>
-                  {decision}
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
       </motion.div>
 
       {/* Tech Stack */}
