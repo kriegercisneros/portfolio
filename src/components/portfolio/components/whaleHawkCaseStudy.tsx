@@ -29,7 +29,7 @@ const subsystems = [
 ];
 
 const architectureDecisions = [
-  "Designed the ENTITY RESOLUTION SYSTEM as the backbone connecting all microservices to canonical entities, enabling a single dossier to serve 400+ clients",
+  "Designed the ENTITY RESOLUTION SYSTEM as the backbone connecting all microservices to canonical entities",
   "Architected microservice separation strategy across Source Pipeline, Intelligence Layer, App Server, and CRM Layer",
   "Built for multi-tenant scalability — external systems point TO WhaleHawk, not the other way around",
   "Engineered dual-container ECS deployment with async runtime isolation to prevent cross-service corruption",
