@@ -68,7 +68,7 @@ export const WhaleHawkCaseStudy = () => {
         <div className="flex items-center gap-4 mb-2">
           <a href="https://app.whalehawk.com" target="_blank" rel="noopener noreferrer" className="text-3xl font-bold text-primary font-serif hover:text-accent transition-colors">WhaleHawk ↗</a>
           <Badge variant="secondary" className="bg-accent text-white text-xs">
-            Technical Founder & CTO
+            Technical Founder & Engineering Lead
           </Badge>
         </div>
         <p className="text-lg text-primary-light">

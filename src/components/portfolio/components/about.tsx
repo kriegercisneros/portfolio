@@ -24,10 +24,6 @@ export const About = () => {
           I&apos;ve shipped production code across Python, TypeScript, React, Node.js, and AWS, and I care as
           much about operational discipline as I do about clean architecture.
         </p>
-        <p className="text-sm text-gray-500">
-          Outside of work, I grew up dancing salsa, ballet, and West African. I read cosmology and
-          snarky fiction, practice yoga, and spend as much time as I can outdoors with my family.
-        </p>
       </div>
     </motion.div>
   );
