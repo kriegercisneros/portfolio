@@ -1,7 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { FileText, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -140,14 +139,6 @@ export const Header = () => {
                     Building real-time intelligence systems at WhaleHawk. From system design to team leadership.
                   </p>
                 </div>
-                <Button
-                  onClick={() => window.open('/resume.pdf', '_blank')}
-                  variant="secondary"
-                  className="w-full md:w-auto bg-accent hover:bg-accent-dark text-white md:ml-8 whitespace-nowrap transition-colors duration-300"
-                >
-                  <FileText className="mr-2 h-4 w-4" />
-                  View Resume
-                </Button>
               </div>
             </motion.div>
           </motion.header>
